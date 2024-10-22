@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <!-- <style>
+      /* Container for cards */
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Individual card */
+      .information {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px;
+        padding: 20px;
+        width: 250px;
+      }
+
+      .imageContainer {
+        text-align: center;
+      }
+
+      .productImage {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .productRating {
+        margin: 10px 0;
+      }
+
+      .productRating i {
+        color: gold;
+      }
+
+      .productPriceElement {
+        margin-bottom: 10px;
+      }
+
+      .productStockElement {
+        margin-bottom: 10px;
+      }
+
+      .productQuantityElement {
+        margin-bottom: 10px;
+      }
+
+      .stockElement {
+        display: flex;
+        align-items: center;
+      }
+
+      .cartIncrement,
+      .cartDecrement {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 0 5px;
+      }
+
+      .add-to-cart-button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+      }
+    </style> -->
+  </head>
+  <body>
+    <section class="section-products container">
+      <div class="container">
+        <h2 class="section-common--heading">Checkout Thapa Store</h2>
+      </div>
+
+      <section class="container">
+        <div id="productContainer"></div>
+      </section>
+    </section>
+
+    <!-- ============== End Our Products Section ============== -->
+
+    <!-- ============== Start Products template Section ============== -->
+
+    <template id="productTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="./public/images/laptop.png" alt="" />
+          </div>
+          <h2 class="productName"></h2>
+
+          <div class="productRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="productDescription"></p>
+
+          <div class="productPriceElement">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+
+          <div class="productStockElement">
+            <p class="productProperty">Total Stocks Available:</p>
+            <p class="productStock"></p>
+          </div>
+
+          <div class="productQuantityElement">
+            <p class="productProperty">Quantity(Pieces)</p>
+            <div class="stockElement">
+              <button class="cartIncrement">+</button>
+              <p class="productQuantity">1</p>
+              <button class="cartDecrement">-</button>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button">
+            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+          </button>
+        </article>
+      </div>
+    </template>
+  </body>
+</html>
